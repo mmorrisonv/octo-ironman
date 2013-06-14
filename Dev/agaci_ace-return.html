@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>*|MC:SUBJECT|*</title>
+        <title>Agaci Return Processed</title>
         <style type="text/css">
 			/* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
 			#outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
@@ -22,7 +22,7 @@
 
 			/* ========== Page Styles ========== */
 
-			#bodyCell{padding:20px;padding-top: 0px;}
+			#bodyCell{padding:20px;padding-top: 0px;padding-bottom: 0px;}
 			#templateContainer{width:600px;}
 
 			/**
@@ -141,6 +141,24 @@
 				margin-left:0;
 				/*@editable*/ text-align:left;
 			}
+
+			h4.heading{
+				font-weight: bold;
+				color:#606060 !important;
+			}
+
+			/*used for the orderSummary Section*/
+			.address h4{
+				margin-bottom:4px;
+			}
+
+
+			.lineItem td {
+				color: #777;
+				font-size: 11px;
+				padding-top:10px;
+			}
+
 
 			/* ========== Header Styles ========== */
 
@@ -312,9 +330,9 @@
 			* @tip Set the styling for your email's left column content links. Choose a color that helps them stand out from your text.
 			*/
 			.leftColumnContent a:link, .leftColumnContent a:visited, /* Yahoo! Mail Override */ .leftColumnContent a .yshortcuts /* Yahoo! Mail Override */{
-				/*@editable*/ color:#EB4102;
-				/*@editable*/ font-weight:normal;
-				/*@editable*/ text-decoration:underline;
+				/*@editable*/ /*color:#EB4102;*/
+				/*@editable*/ /*font-weight:normal;*/
+				/*@editable*/ text-decoration:none;
 			}
 
 			/**
@@ -340,9 +358,9 @@
 			* @tip Set the styling for your email's center column content links. Choose a color that helps them stand out from your text.
 			*/
 			.centerColumnContent a:link, .centerColumnContent a:visited, /* Yahoo! Mail Override */ .centerColumnContent a .yshortcuts /* Yahoo! Mail Override */{
-				/*@editable*/ color:#EB4102;
-				/*@editable*/ font-weight:normal;
-				/*@editable*/ text-decoration:underline;
+				/*@editable*/ /*color:#EB4102;*/
+				/*@editable*/ /*font-weight:normal;*/
+				/*@editable*/ text-decoration:none;
 			}
 
 			/**
@@ -368,9 +386,9 @@
 			* @tip Set the styling for your email's right column content links. Choose a color that helps them stand out from your text.
 			*/
 			.rightColumnContent a:link, .rightColumnContent a:visited, /* Yahoo! Mail Override */ .rightColumnContent a .yshortcuts /* Yahoo! Mail Override */{
-				/*@editable*/ color:#EB4102;
-				/*@editable*/ font-weight:normal;
-				/*@editable*/ text-decoration:underline;
+				/*@editable*/ /*color:#EB4102;*/
+				/*@editable*/ /*font-weight:normal;*/
+				/*@editable*/ text-decoration:none;
 			}
 
 			.leftColumnContent img, .rightColumnContent img{
@@ -378,6 +396,45 @@
 				height:auto;
 				max-width:260px;
 			}
+
+			/* ========== OrderStyles ========== */
+			/**
+			* @tab Body
+			* @section body text
+			* @tip Set the styling for an order detail summary.
+			* @theme main
+			*/
+			.orderContent{
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Helvetica;
+				/*@editable*/ font-size:12px;
+				/*@editable*/ line-height:130%;
+				padding-top:20px;
+				padding-right:20px;
+				padding-bottom:20px;
+				padding-left:20px;
+				/*@editable*/ text-align:left;
+				/*@editable*/ border-top:1px solid #CCCCCC;
+			}
+
+			/**
+			* @tab Body
+			* @section body link
+			* @tip Set the styling for the links in order detail summary section. Choose a color that helps them stand out from your text.
+			*/
+			.orderContent a:link, .orderContent a:visited, /* Yahoo! Mail Override */ .orderContent a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#EB4102;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+
+			.orderContent img{
+				display:inline;
+				height:auto;
+				max-width:560px;
+			}
+
+
 
 			/* ========== Footer Styles ========== */
 
@@ -429,7 +486,7 @@
                 body{width:100% !important; min-width:100% !important;} /* Prevent iOS Mail from adding padding to the body */
 
 				/* /\/\/\/\/\/\/ MOBILE RESET STYLES /\/\/\/\/\/\/ */
-				#bodyCell{padding:10px !important;}
+				#bodyCell{padding:0px !important;}
 
 				/* /\/\/\/\/\/\/ MOBILE TEMPLATE STYLES /\/\/\/\/\/\/ */
 
@@ -627,7 +684,7 @@
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
                                         <tr>
                                             <td valign="top" class="bodyContent" mc:edit="body_content">
-                                                <h1>IMPORTANT INFORMATION ABOUT YOUR AGACI ORDER</h1>
+                                                <h2>IMPORTANT INFORMATION ABOUT YOUR AGACI ORDER</h2>
                                                 <br />
                                                 <h2>Dear John Doe,</h2>
                                                 Thank you for you shopping at Agacistore.com.
@@ -643,25 +700,25 @@
                                     <!-- // END BODY -->
                                 </td>
                             </tr>
+
+
                         	<tr>
                             	<td align="center" valign="top">
-                                	<!-- BEGIN COLUMNS // -->
+                                	<!-- BEGIN ORDSUMMARY // -->
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns">
                                     	<tr mc:repeatable>
                                         	<td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
                                             	<table border="0" cellpadding="20" cellspacing="0" width="100%">
                                                 	<tr>
                                                     	<td class="leftColumnContent">
-                                                        	<img src="http://placehold.it/600x400" style="max-width:160px;" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image" />
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                    	<td valign="top" class="leftColumnContent" mc:edit="left_column_content">
-                                                            <h3>Repeatable Content</h3>
-                                                            <a href="http://kb.mailchimp.com/article/how-do-i-work-with-repeatable-content-blocks" target="_blank">Repeatable sections</a> are noted with plus and minus signs so that you can add and subtract content blocks.
-                                                            <br />
-                                                            <br />
-                                                            You can also get a little fancy; repeat blocks and remove all text to make image galleries, or do the opposite and remove images for text-only blocks.
+                                                        	<h3 style="margin-bottom:4px;">Order Number</h3>
+                                                        	<h4>T-0000003300</h4>
+                                                            
+                                                            <h3 style="margin-bottom:4px;">Order Date</h3>
+                                                            <h4>09/29/2012</h4>                                                   
+
+                                                            <h3 style="margin-bottom:4px;">Shipping Method</h3>
+                                                            <h4>Standard</h4>              	
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -669,17 +726,129 @@
                                         	<td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
                                             	<table border="0" cellpadding="20" cellspacing="0" width="100%">
                                                 	<tr>
+                                                    	<td class="centerColumnContent address">
+                                                        	<h3>Billing Address</h3>
+                                                        	<br/>
+                                                        	<h4 style="font-weight:bold;">John Doe</h4>
+                                                        	<h4 style="font-weight:normal;">12345 Los Angeles Street</h4>
+                                                        	<h4 style="font-weight:normal;">Los Angeles, CA 90021</h4>
+                                                        	<h4 style="font-weight:normal;">United States</h4>                                         	
+                                                        </td>
+                                                    </tr>
+                                                 
+                                                </table>
+                                            </td>
+                                        	<td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
+                                            	<table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                                	<tr>
+                                                    	<td class="rightColumnContent address">
+                                                        	<h3>Shipping Address</h3>
+                                                        	<br/>
+                                                        	<h4 style="font-weight:bold;">John Doe</h4>
+                                                        	<h4 style="font-weight:normal;">12345 Los Angeles Street</h4>
+                                                        	<h4 style="font-weight:normal;">Los Angeles, CA 90021</h4>
+                                                        	<h4 style="font-weight:normal;">United States</h4>                                         	
+                                                        </td>
+                                                    </tr>
+                                                
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // END ORDSUMMARY -->
+                                </td>
+                            </tr>
+
+
+                        	<tr>
+                            	<td align="center" valign="top">
+                                	<!-- BEGIN COLUMNS // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns">
+                                    	<tr mc:repeatable>
+                                        	<td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
+                                            	<table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                            		
+                                                	<tr>
+                                                    	<td class="leftColumnContent">
+                                                    		<a href="http://www.agacistore.com/product.aspx?id=1261430&cid=1290">
+                                                        	<img src="http://images.agacistore.com/images/products/1_1261430_MD_85_FRONT.jpg" style="max-width:160px;" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image" />
+                                                        	</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    	<td valign="top" class="leftColumnContent" mc:edit="left_column_content">
+															<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    			<tr>
+                                                    				<td colspan="3" align="center">
+                                                    					<a href="http://www.agacistore.com/product.aspx?id=1261430&cid=1290">
+			                                                            <h3 style="margin-bottom:8px; text-align:center !important;">Gold Button Chiffon Blouse</h3>
+			                                                        	</a>
+			                                                        	
+                                                    				</td>
+                                                    			</tr>	
+                                                    			<tr class="triplect">
+                                                    				<td width="70%" valign="top" >
+			                                                            <h4 class="heading" style="margin-bottom:4px;display:inline;">Color </h3>
+			                                                            <h4 style="display:inline;"> Peach</h4>
+			                                                            <br/>			                                               
+			                                                            <h4 class="heading" style="margin-bottom:4px; display:inline;">Size </h3>
+			                                                            <h4 style="display:inline;"> Med</h4>                                                 
+	                                                            	</td>
+	                                                   
+                                                    				<td width="30%" valign="top" >
+																		<h4 class="heading" style="margin-bottom:4px; text-align:right;">Price </h3>
+                                                            			<h4 style="text-align:right;"> $15.50</h4> 
+                                                    				</td>
+                                                    			</tr>	
+                                                                                          			                                                    			
+                                                    		</table>
+
+                                                        </td>
+                                                    </tr>
+                                                	</a>
+                                                </table>
+                                            </td>
+                                        	<td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
+                                            	<table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                            		
+                                                	<tr>
                                                     	<td class="centerColumnContent">
-                                                        	<img src="http://placehold.it/600x400" style="max-width:160px;" class="columnImage" mc:label="center_column_image" mc:edit="center_column_image" />
+
+                                                    		<a href="http://www.agacistore.com/product.aspx?id=1261138&cid=1588">
+                                                        	<img src="http://images.agacistore.com/images/products/1_1261138_FS_41_FRONT.jpg" style="max-width:160px;" class="columnImage" mc:label="center_column_image" mc:edit="center_column_image" />
+                                                        	</a>
+
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                     	<td valign="top" class="centerColumnContent" mc:edit="center_column_content">
-                                                            <h3>Repeatable Content</h3>
-                                                            <a href="http://kb.mailchimp.com/article/how-do-i-work-with-repeatable-content-blocks" target="_blank">Repeatable sections</a> are noted with plus and minus signs so that you can add and subtract content blocks.
-                                                            <br />
-                                                            <br />
-                                                            You can also get a little fancy; repeat blocks and remove all text to make image galleries, or do the opposite and remove images for text-only blocks.
+                                                    		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    			<tr>
+                                                    				<td colspan="3" align="center">
+                                                    					<a href="http://www.agacistore.com/product.aspx?id=1261138&cid=1588">
+			                                                            <h3 style="margin-bottom:8px; text-align:center !important;">Colorblock Sheath Dress</h3>
+			                                                        	</a>
+			                                                        	
+                                                    				</td>
+                                                    			</tr>	
+                                                    			<tr class="triplect">
+                                                    				<td width="70%" valign="top" >
+			                                                            <h4 class="heading" style="margin-bottom:4px;display:inline;">Color </h3>
+			                                                            <h4 style="display:inline;"> Navy</h4>
+			                                                            <br/>			                                               
+			                                                            <h4 class="heading" style="margin-bottom:4px; display:inline;">Size </h3>
+			                                                            <h4 style="display:inline;"> Lrg</h4>                                                 
+	                                                            	</td>
+	                                                   
+                                                    				<td width="30%" valign="top" >
+																		<h4 class="heading" style="margin-bottom:4px; text-align:right;">Price </h3>
+                                                            			<h4 style="text-align:right;"> $24.50</h4> 
+                                                    				</td>
+                                                    			</tr>	
+                                                                                          			                                                    			
+                                                    		</table>
+                                                    		
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -688,23 +857,97 @@
                                             	<table border="0" cellpadding="20" cellspacing="0" width="100%">
                                                 	<tr>
                                                     	<td class="rightColumnContent">
-                                                        	<img src="http://placehold.it/600x400" style="max-width:160px;" class="columnImage" mc:label="right_column_image" mc:edit="right_column_image" />
+                                                        	<img src="http://images.agacistore.com/images/products/1_1261039_FS_98_SIDE.jpg" style="max-width:160px;" class="columnImage" mc:label="right_column_image" mc:edit="right_column_image" />
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                     	<td valign="top" class="rightColumnContent" mc:edit="right_column_content">
-                                                            <h3>Repeatable Content</h3>
-                                                            <a href="http://kb.mailchimp.com/article/how-do-i-work-with-repeatable-content-blocks" target="_blank">Repeatable sections</a> are noted with plus and minus signs so that you can add and subtract content blocks.
-                                                            <br />
-                                                            <br />
-                                                            You can also get a little fancy; repeat blocks and remove all text to make image galleries, or do the opposite and remove images for text-only blocks.
+
+                                                    		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    			<tr>
+                                                    				<td colspan="3" align="center">
+                                                    					<a href="http://www.agacistore.com/product.aspx?id=1261039&cid=1651">
+			                                                            <h3 style="margin-bottom:8px; text-align:center !important;">Graphic Graffiti Legging</h3>
+			                                                        	</a>
+			                                                        	
+                                                    				</td>
+                                                    			</tr>	
+                                                    			<tr class="triplect">
+                                                    				<td width="70%" valign="top" >
+			                                                            <h4 class="heading" style="margin-bottom:4px;display:inline;">Color </h3>
+			                                                            <h4 style="display:inline;"> Multi</h4>
+			                                                            <br/>			                                               
+			                                                            <h4 class="heading" style="margin-bottom:4px; display:inline;">Size </h3>
+			                                                            <h4 style="display:inline;"> Med</h4>                                                 
+	                                                            	</td>
+	                                                   
+                                                    				<td width="30%" valign="top" >
+																		<h4 class="heading" style="margin-bottom:4px; text-align:right;">Price </h3>
+                                                            			<h4 style="text-align:right;"> $14.50</h4> 
+                                                    				</td>
+                                                    			</tr>	
+                                                                                          			                                                    			
+                                                    		</table>
                                                         </td>
                                                     </tr>
+
                                                 </table>
                                             </td>
                                         </tr>
                                     </table>
                                     <!-- // END COLUMNS -->
+                                </td>
+                            </tr>
+                        	
+
+
+                        	<tr>
+                            	<td align="center" valign="top" class="orderContent">
+                                	<!-- BEGIN ORDER // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateOrder">
+                                		<tr style="padding:20px;">
+                                			<th  align="left" valign="top">Product</th>
+                                			<th  align="center" valign="top">Color</th>
+                                			<th  align="center" valign="top">Size</th>
+                                			<th  align="center" valign="top">Qty</th>
+                                			<th  align="center" valign="top">Price Each</th>
+                                			<th  align="center" valign="top">Total Price</th>
+                                		</tr>
+                                    	<tr class="lineItem" mc:repeatable>
+                                        	<td align="left" valign="top">
+ 												Gold Button Chiffon Blouse<br />Item #35030-2918
+                                            </td>
+                                        	<td align="center" valign="top" >Peach</td>
+                                        	<td align="center" valign="top" >Med</td>
+                                        	<td align="center" valign="top" >1</td>
+                                        	<td align="center" valign="top" >$15.50</td>
+                                        	<td align="center" valign="top" >$15.50</td>
+
+                                        </tr>
+                                    	<tr class="lineItem" mc:repeatable>
+                                        	<td align="left" valign="top">
+ 												Colorblock Sheath Dress<br />Item #35030-2918
+                                            </td>
+                                        	<td align="center" valign="top" >Navy</td>
+                                        	<td align="center" valign="top" >Lrg</td>
+                                        	<td align="center" valign="top" >2</td>
+                                        	<td align="center" valign="top" >$24.50</td>
+                                        	<td align="center" valign="top" >$49.00</td>
+
+                                        </tr>
+                                    	<tr class="lineItem" mc:repeatable>
+                                        	<td align="left" valign="top">
+ 												Graphic Graffiti Legging<br />Item #35030-2918
+                                            </td>
+                                        	<td align="center" valign="top"  >Multi</td>
+                                        	<td align="center" valign="top" >Med</td>
+                                        	<td align="center" valign="top" >1</td>
+                                        	<td align="center" valign="top" >$14.50</td>
+                                        	<td align="center" valign="top" >$14.50</td>
+
+                                        </tr>                                                                                
+                                    </table>
+                                    <!-- // END ORDER -->
                                 </td>
                             </tr>
                         	<tr>
@@ -713,26 +956,15 @@
                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
                                         <tr>
                                             <td valign="top" class="footerContent" mc:edit="footer_content00">
-                                                <a href="*|TWITTER:PROFILEURL|*">Follow on Twitter</a>&nbsp;&nbsp;&nbsp;<a href="*|FACEBOOK:PROFILEURL|*">Friend on Facebook</a>&nbsp;&nbsp;&nbsp;<a href="*|FORWARD|*">Forward to Friend</a>&nbsp;
+                                               <h4>We are here to help. If you have any questions do not hesitate to contact our Customer Service Department at (866)362 - 4224, or email us at <a href="mailto:customerservice@agacistore.com">customersupport@agacistore.com</a></h4>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td valign="top" class="footerContent" style="padding-top:0;" mc:edit="footer_content01">
-                                                <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>
-                                                <br />
-                                                *|IFNOT:ARCHIVE_PAGE|* *|LIST:DESCRIPTION|*
-                                                <br />
-                                                <br />
-                                                <strong>Our mailing address is:</strong>
-                                                <br />
-                                                *|HTML:LIST_ADDRESS_HTML|* *|END:IF|* 
+                                            <td valign="top" class="footerContent" style="padding:0;" mc:edit="footer_content01">
+                                                               <img src="img/footer.gif" style="max-width:600px;"/>                
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td valign="top" class="footerContent" style="padding-top:0;" mc:edit="footer_content02">
-                                            	<a href="*|UNSUB|*">unsubscribe from this list</a>&nbsp;&nbsp;&nbsp;<a href="*|UPDATE_PROFILE|*">update subscription preferences</a>&nbsp;
-                                            </td>
-                                        </tr>
+                               
                                     </table>
                                     <!-- // END FOOTER -->
                                 </td>
